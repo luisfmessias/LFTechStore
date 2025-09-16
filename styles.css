@@ -310,6 +310,8 @@ header nav ul li:hover::after {
     position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(0, 247, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    animation: circleanimation 8s infinite alternate;
 }
 
 
@@ -339,4 +341,15 @@ header nav ul li:hover::after {
     height: 120px;
     top: 20%;
     left: 70%;
+}
+
+@keyframes circleanimation {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 247, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 200px rgba(0, 247, 255, 0.5);
+
+    }
 }
