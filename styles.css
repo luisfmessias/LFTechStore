@@ -107,10 +107,16 @@ header nav ul li:hover::after {
     justify-content: center;
     align-items: center;
     opacity: 0;
+
+    /*animação*/
+
+    transform: translateX(100vw);
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
 .active {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .product-img {
@@ -127,6 +133,16 @@ header nav ul li:hover::after {
     max-width: 80%;
     max-height: 60%;
     filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .product-img img {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .content {
@@ -146,6 +162,16 @@ header nav ul li:hover::after {
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.active .product-tag {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .product-name {
@@ -153,17 +179,37 @@ header nav ul li:hover::after {
     font-family: "Orbitron", sans-serif;
     line-height: 1.1;
     margin-bottom: 20px;
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
 
-.description{
+.active .product-name {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.description {
     font-size: 1.1rem;
     color: #b8b8d0;
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 600px;
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
 
-.btn{
+.active .description {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.btn {
     padding: 12px 22px;
     background: linear-gradient(90deg, #00f7ff, #0066ff);
     border-radius: 30px;
@@ -172,15 +218,25 @@ header nav ul li:hover::after {
     font-weight: 600;
     cursor: pointer;
     border: none;
+    /*animação*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transition-delay: 0.5s;
 }
 
-.btn:hover{
+.active .btn {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.btn:hover {
     background: linear-gradient(90deg, #57d0d4, #2f63b2);
     scale: 0.99;
 }
 
 
-.arrows{
+.arrows {
     position: absolute;
     width: 90%;
     display: flex;
@@ -191,7 +247,7 @@ header nav ul li:hover::after {
     z-index: 5;
 }
 
-.arrow-btn{
+.arrow-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -200,12 +256,12 @@ header nav ul li:hover::after {
     border: 1px solid rgba(0, 247, 255, 0.3);
 }
 
-.arrow-btn:hover{
+.arrow-btn:hover {
     background-color: rgba(0, 247, 255, 0.2);
     border-color: #00f7ff;
 }
 
-.indicators{
+.indicators {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -217,31 +273,31 @@ header nav ul li:hover::after {
     z-index: 5;
 }
 
-.numbers{
+.numbers {
     font-family: "Orbitron", sans-serif;
     font-size: 3rem;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.2);
 }
 
-.dots{
+.dots {
     display: flex;
     gap: 10px;
 }
 
-.dot{
+.dot {
     width: 40px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 2px;
 }
 
-.dot.active{
+.dot.active {
     background-color: #00f7ff;
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 
-.tech-circle{
+.tech-circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -250,35 +306,35 @@ header nav ul li:hover::after {
     overflow: hidden;
 }
 
-.circle{
+.circle {
     position: absolute;
     border-radius: 50%;
     border: 1px solid rgba(0, 247, 255, 0.2);
 }
 
 
-.circle:nth-child(1){
+.circle:nth-child(1) {
     width: 200px;
     height: 200px;
     top: 10%;
     left: 10%;
 }
 
-.circle:nth-child(2){
+.circle:nth-child(2) {
     width: 300px;
     height: 300px;
     top: 60%;
     left: 80%;
 }
 
-.circle:nth-child(3){
+.circle:nth-child(3) {
     width: 150px;
     height: 150px;
     top: 70%;
     left: 20%;
 }
 
-.circle:nth-child(4){
+.circle:nth-child(4) {
     width: 120px;
     height: 120px;
     top: 20%;
